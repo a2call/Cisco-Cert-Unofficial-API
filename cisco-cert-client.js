@@ -18,10 +18,10 @@ exports.find = function(certCode, callback) {
 
 			$('b').each(function(i, elem) {
 				if (i === 0) {
-					responseCert = elem;
+					responseCert = elem.text();
 				}
 				if (i === 1) {
-					responseName = elem;
+					responseName = elem.text();
 				}
 			});
 
