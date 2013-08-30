@@ -12,7 +12,6 @@ exports.find = function(certCode, callback) {
 		    // pull <b> tag items for cert name and user name
 		    var responseCert = $('b').eq(0).text();
 			var responseName = $('b').eq(1).text();
-			//debug
 
 			var o = {'cert': responseCert, 'name': responseName};
 			callback(JSON.stringify(o));
