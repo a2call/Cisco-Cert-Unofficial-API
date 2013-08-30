@@ -10,6 +10,9 @@ exports.find = function(certCode, callback) {
 	    if (resp.statusCode == 200) {
 	    	$ = cheerio.load(body);
 		    
+		    var responseCert = "init";
+		    var responseName = "init";
+		    
 		    // pull <b> tag items for cert name and user name
 			$('b').each(function(i, elem) {
 				console.log('assignment index is ' + i);
