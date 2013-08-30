@@ -1,8 +1,7 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
-// assign parameters
-var givenName = process.argv[3];
+// assign verification code parameter
 var givenCode = process.argv[2];
 
 // POST verification form and assign to $ object
