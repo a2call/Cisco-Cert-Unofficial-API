@@ -14,10 +14,8 @@ exports.find = function(certCode, callback) {
 			var responseName = $('b').eq(1).text();
 			//debug
 
-			var response = '{"cert-name":"' + responseCert 
-						 + ',"cert-holder":"' + responseName + '"}';
-
-			callback(response);
+			var o = {'cert': responseCert, 'name': responseName};
+			callback(JSON.stringify(o));
 		}
 	});
 }
