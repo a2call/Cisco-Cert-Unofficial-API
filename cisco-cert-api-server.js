@@ -1,8 +1,9 @@
+#!/usr/bin/env node
 var http = require('http');
-var certFinder = require('./findCertName.js');
+var client = require('./cisco-cert-client.js');
 
 http.createServer(function  (request, response) {
-	certFinder.find(request.url.substr(1), function(certJson) {
+	client.find(request.url.substr(1), function(certJson) {
 		response.writeHead(200);
 		response.write(certJson);
 		response.end();

@@ -1,0 +1,22 @@
+{
+  "name": "cisco-cert-api-server",
+  "description": "Unofficial cisco cert api",
+  "author": "Mat Wood <matplaysbass@gmail.com>, Thabo Fletcher <_@tha.bo>",
+  "version": "0.0.3",
+  "dependencies": {
+    "request": "*",
+    "cheerio": "*"
+  },
+  "scripts": {
+  	"start": "node cisco-cert-api-server.js"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "cisco-cert-api-server" : "cisco-cert-api-server.js"
+  },
+  "repository" : { 
+  	"type" : "git",
+  	"url" : "https://github.com/matplaysbass/Cisco-Cert-Unofficial-API"
+  },
+  "engine": "node"
+}
