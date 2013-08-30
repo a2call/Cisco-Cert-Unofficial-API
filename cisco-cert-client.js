@@ -9,21 +9,18 @@ exports.find = function(certCode, callback) {
 	        throw err;
 	    if (resp.statusCode == 200) {
 	    	$ = cheerio.load(body);
+		    
 		    // pull <b> tag items for cert name and user name
-
-			var responseCert = $('b').first().text();
-			var responseName = $('b').first().next().text();
-
-			// $('b').each(function(i, elem) {
-			// 	console.log('assignment index is ' + i);
-			// 	console.log('b text is ' + $(this).text());
-			// 	if (i === 0) {
-			// 		responseCert = $(this).text();
-			// 	}
-			// 	if (i === 1) {
-			// 		responseName = $(this).text();
-			// 	}
-			// });
+			$('b').each(function(i, elem) {
+				console.log('assignment index is ' + i);
+				console.log('b text is ' + $(this).text());
+				if (i === 0) {
+					responseCert = $(this).text();
+				}
+				if (i === 1) {
+					responseName = $(this).text();
+				}
+			});
 
 			var o = {'cert': responseCert, 'name': responseName};
 			callback(JSON.stringify(o));
