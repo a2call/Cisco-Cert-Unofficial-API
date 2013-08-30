@@ -5,8 +5,8 @@ exports.find = function(certCode, callback) {
 	// POST verification form and assign to $ object
 	var url = 'http://www.ciscocertificates.com/verify.cfm';
 	request.post(url, {form:{'code':certCode,'fsubmitCheck':'Check'}}, function(err, resp, body) {
-	    if (err)
-	        throw err;
+	    // if (err)
+	    //     throw err;
 	    if (resp.statusCode == 200) {
 	    	$ = cheerio.load(body);
 		    // pull <b> tag items for cert name and user name
