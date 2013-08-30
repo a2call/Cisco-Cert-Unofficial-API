@@ -17,6 +17,8 @@ exports.find = function(certCode, callback) {
 			var responseName = "";
 
 			$('b').each(function(i, elem) {
+				console.log('assignment index is ' + i);
+				console.log('b text is ' + $(this).text());
 				if (i === 0) {
 					responseCert = $(this).text();
 				}

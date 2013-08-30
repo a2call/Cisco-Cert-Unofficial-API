@@ -6,7 +6,6 @@ var app = express();
 app.use(express.logger());
 
 app.get('/verify', function(req, res) {
-	console.log('code = ' + req.query.code);
   	client.find(req.query.code, function(certJson) {
 		res.send(certJson);
 		console.log(certJson);
@@ -15,7 +14,6 @@ app.get('/verify', function(req, res) {
 
 app.get('/', function(req, res) {
 	res.send('<h3 style="text-align: center;">Please see usage <a href="https://github.com/matplaysbass/Cisco-Cert-Unofficial-API" title="Cisco-Cert-Unofficial-API">here: https://github.com/matplaysbass/Cisco-Cert-Unofficial-API</a></h3>');
-	
 });
 
 var port = process.env.PORT || 5000;
