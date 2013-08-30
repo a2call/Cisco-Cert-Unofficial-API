@@ -13,6 +13,8 @@ cheerio
 
 express
 
+underscore
+
 Usage
 ===========
 Send an HTTP GET request with query string that includes code to get back the Cisco Certification name and the user's name.

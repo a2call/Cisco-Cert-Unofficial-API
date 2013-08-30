@@ -6,7 +6,8 @@
   "dependencies": {
     "request": "2.27.x",
     "cheerio": "0.0.x",
-    "express": "3.3.x"
+    "express": "3.3.x",
+    "underscore": "1.5.x"
   },
   "scripts": {
   	"start": "node cisco-cert-api-server.js"
