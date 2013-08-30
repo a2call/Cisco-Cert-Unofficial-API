@@ -17,6 +17,9 @@ request.post(url, {form:{'code':givenCode,'fsubmitCheck':'Check'}}, function(err
 		//debug
 		console.log('Cert name is: ' + responseCert);
 		console.log('User name is: ' + responseName);
+		// send results via JSON object
+		var o = {'cert': responseCert, 'name': responseName};
+		console.log(JSON.stringify(o));
 	}
 });
 
