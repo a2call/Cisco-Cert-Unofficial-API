@@ -10,6 +10,10 @@ exports.find = function(certCode, callback) {
 	    if (resp.statusCode == 200) {
 	    	$ = cheerio.load(body);
 		    // pull <b> tag items for cert name and user name
+		    
+		    //debugging - Object has no .eq method
+		    console.log($('b'));
+
 		    var responseCert = $('b').eq(0).text();
 			var responseName = $('b').eq(1).text();
 
