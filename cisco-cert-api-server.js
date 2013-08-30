@@ -1,14 +1,19 @@
 #!/usr/bin/env node
-var http = require('http');
+var express = require('express');
 var client = require('./cisco-cert-client.js');
 
-var port = process.env.PORT || 3000;
+var app = express();
+app.use(express.logger());
 
-http.createServer(function  (request, response) {
-	client.find(request.url.substr(1), function(certJson) {
-		response.writeHead(200);
-		response.write(certJson);
-		response.end();
+app.get('/verify', function(req, res) {
+	console.log('code = ' + req.query.code);
+  	client.find(req.query.code, function(certJson) {
+		res.send(certJson);
 		console.log(certJson);
 	});
-}).listen(port);
+});
+
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});

@@ -10,3 +10,15 @@ Node.js
 request
 
 cheerio
+
+express
+
+Usage
+===========
+Send an HTTP GET request with query string that includes code to get back the Cisco Certification name and the user's name.
+E.g.
+
+http://yourhosthere/verify?code=XXXXXXXXXXXXXXXXXXXXXX
+
+Returned JSON object will look like:
+{"cert":"CCNP","name":"John Smith"}
