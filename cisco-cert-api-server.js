@@ -13,6 +13,11 @@ app.get('/verify', function(req, res) {
 	});
 });
 
+app.get('/', function(req, res) {
+	res.send('<h3 style="text-align: center;">Please see usage <a href="https://github.com/matplaysbass/Cisco-Cert-Unofficial-API" title="Cisco-Cert-Unofficial-API">here: https://github.com/matplaysbass/Cisco-Cert-Unofficial-API</a></h3>');
+	
+});
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
