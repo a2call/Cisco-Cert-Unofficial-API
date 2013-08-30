@@ -5,7 +5,7 @@
   "version": "0.0.4",
   "dependencies": {
     "request": "2.27.x",
-    "cheerio": "0.0.3",
+    "cheerio": "0.12.x",
     "express": "3.3.x",
     "underscore": "1.5.x"
   },
