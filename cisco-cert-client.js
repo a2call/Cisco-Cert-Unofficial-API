@@ -11,8 +11,19 @@ exports.find = function(certCode, callback) {
 	    	$ = cheerio.load(body);
 		    // pull <b> tag items for cert name and user name
 
-		    var responseCert = $('b').eq(0).text();
-			var responseName = $('b').eq(1).text();
+			// var responseCert = $('b').eq(0).text();
+			// var responseName = $('b').eq(1).text();
+			var responseCert = "";
+			var responseName = "";
+
+			$('b').each(function(i, elem) {
+				if (i === 0) {
+					responseCert = elem;
+				}
+				if (i === 1) {
+					responseName = elem;
+				}
+			});
 
 			var o = {'cert': responseCert, 'name': responseName};
 			callback(JSON.stringify(o));
