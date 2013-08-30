@@ -1,0 +1,13 @@
+{
+  "name": "Cisco-Cert-Unofficial-API",
+  "version": "0.0.1",
+  "description": "Verify Cisco Certs via API",
+  "dependencies": {
+    "request": "2.27.x",
+    "cheerio": "0.0.x"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
