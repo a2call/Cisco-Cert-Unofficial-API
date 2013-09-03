@@ -24,3 +24,20 @@ http://yourhosthere/verify?code=XXXXXXXXXXXXXXXXXXXXXX
 
 Returned JSON object will look like:
 {"cert":"CCNP","name":"John Smith"}
+
+If the Cert Verification number is not found, an HTTP 404 will be returned.
+
+If the Cisco server times out or has another error, an HTTP 500 will be returned.
+
+Installation
+===========
+###With NPM:
+
+
+    $ npm install cisco-cert-api-server
+https://npmjs.org/package/cisco-cert-api-server
+
+###With Heroku:
+
+This can easily be deloyed into a Heroku App via the Heroku toolkit.  Install via npm, then create and push the app via Git. Instructions here: https://devcenter.heroku.com/articles/nodejs
+
