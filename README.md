@@ -1,19 +1,11 @@
 Cisco-Cert-Unofficial-API
 ===========
 
-Verify Cisco Certs from within your app. This utility will post the Cisco Cert verification code and name inorder to verify a Cisco Cert for that person.
+Verify Cisco Certs from within your app. This utility will post the Cisco Cert verification code and name in order to verify a Cisco Cert for that person. CCIE and CCDE validation not included for now, as that uses a different tool and I am working on that as well.
 
 Dependencies
 ===========
-Node.js
-
-request
-
-cheerio
-
-express
-
-underscore
+Node.js, request, cheerio, express, underscore
 
 Usage
 ===========
@@ -23,7 +15,7 @@ E.g.
 http://yourhosthere/verify?code=XXXXXXXXXXXXXXXXXXXXXX
 
 Returned JSON object will look like:
-{"cert":"CCNP","name":"John Smith"}
+    {"cert":"CCNP","name":"John Smith"}
 
 If the Cert Verification number is not found, an HTTP 404 will be returned.
 
