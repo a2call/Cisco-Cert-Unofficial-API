@@ -15,11 +15,13 @@ E.g.
 http://yourhosthere/verify?code=XXXXXXXXXXXXXXXXXXXXXX
 
 Returned JSON object will look like:
-    {"cert":"CCNP","name":"John Smith"}
+    {"cert":"CCNP","name":"John Smith", "description":"Brief Description of Cisco Cert"}
 
 If the Cert Verification number is not found, an HTTP 404 will be returned.
 
 If the Cisco server times out or has another error, an HTTP 500 will be returned.
+
+If the Cisco cert name doesn't match the pre-defined names, a description of "No Description Exists" will be returned.
 
 Installation
 ===========
