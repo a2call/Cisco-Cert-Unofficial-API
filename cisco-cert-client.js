@@ -7,12 +7,12 @@ var certDescriptions = {
 	"CCT": ["Cisco Certified Technicians (CCT) have the skills to diagnose, restore, repair, and replace critical Cisco networking and system devices at customer sites.",""],
 	"CCNA": ["CCNA Routing and Switching validates the ability to install, configure, operate, and troubleshoot medium-size routed and switched networks.",""],
 	"CCNA Data Center": ["CCNA Data Center validates knowledge of data center operation, equipment installation, and maintenance.",""],
-	"CCNA Security": ["CCNA Security validates knowledge of security infrastructure, threats, and vulnerabilities to networks and threat mitigation.",""],
+	"CCNA-Security": ["CCNA Security validates knowledge of security infrastructure, threats, and vulnerabilities to networks and threat mitigation.",""],
 	"CCNA Service Provider": ["CCNA Service Provider validates the ability to configure and implement baseline Cisco Service Provider Next-Generation networks.",""],
 	"CCNA Service Provider Operations": ["CCNA service provider operations validates skills in a prescriptive troubleshooting environment within a carrier class, IP NGN core network infrastructure.",""],
-	"CCNA Video": ["CCNA Video extends skills of audiovisual professionals working with traditional analog solutions into a Video-over-IP networked video environment",""],
-	"CCNA Voice": ["CCNA Voice validates skills for voice technologies, such as voice technologies administrator, voice engineer, and voice manager.",""],
-	"CCNA Wireless": ["CCNA Wireless covers wireless LANs, including networking associates/administrators, wireless support specialists, and WLAN project managers.",""],
+	"CCNA-Video": ["CCNA Video extends skills of audiovisual professionals working with traditional analog solutions into a Video-over-IP networked video environment",""],
+	"CCNA-Voice": ["CCNA Voice validates skills for voice technologies, such as voice technologies administrator, voice engineer, and voice manager.",""],
+	"CCNAW": ["CCNA Wireless covers wireless LANs, including networking associates/administrators, wireless support specialists, and WLAN project managers.",""],
 	"CCDA": ["Cisco Certified Design Associate (CCDA) is for network design engineers, technicians, and support engineers, who enable efficient network environments with an understanding of network design fundamentals.",""],
 	"CCDP": ["A Cisco Certified Design Professional (CCDP) is a network professional that can discuss, design, and create advanced addressing and routing, security, network management, data center, and IP multicast enterprise architectures that include virtual private networking and wireless domains.",""],
 	"CCNP": ["The Cisco Certified Network Professional (CCNP) validates the ability to plan, implement, verify, and troubleshoot local and wide-area enterprise networks and work collaboratively with network technology specialists.",""],
@@ -38,7 +38,10 @@ exports.find = function(certCode, callback) {
 			if (responseCert === 'Check' && responseName === 'Instructions: ') { 
 				callback(404); 
 			} else {
-				var o = {'cert': responseCert, 'name': responseName, 'description': certDescriptions[responseCert][0]};
+				if (certDescriptions.hasOwnProperty(responseCert)){
+					var o = {'cert': responseCert, 'name': responseName, 'description': certDescriptions[responseCert][0]};
+				}
+				var o = {'cert': responseCert, 'name': responseName, 'description': "No Description Present."};
 				callback(JSON.stringify(o));
 			}
 		} else callback(500);
