@@ -1,3 +1,4 @@
+cert examples.json
 lib-cov
 *.seed
 *.log
