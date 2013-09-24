@@ -41,7 +41,7 @@ exports.find = function(certCode, callback) {
 				if (certDescriptions.hasOwnProperty(responseCert)){
 					var o = {'cert': responseCert, 'name': responseName, 'description': certDescriptions[responseCert][0]};
 				} else {
-					var o = {'cert': responseCert, 'name': responseName, 'description': "No Description Present."};
+					var o = {'cert': responseCert, 'name': responseName, 'description': ""};
 				}
 				callback(JSON.stringify(o));
 			}
