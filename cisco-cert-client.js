@@ -12,7 +12,7 @@ var certDescriptions = {
 	"CCNA Service Provider Operations": ["CCNA service provider operations validates skills in a prescriptive troubleshooting environment within a carrier class, IP NGN core network infrastructure.",""],
 	"CCNA-Video": ["CCNA Video extends skills of audiovisual professionals working with traditional analog solutions into a Video-over-IP networked video environment",""],
 	"CCNA-Voice": ["CCNA Voice validates skills for voice technologies, such as voice technologies administrator, voice engineer, and voice manager.",""],
-	"CCNA W": ["CCNA Wireless covers wireless LANs, including networking associates/administrators, wireless support specialists, and WLAN project managers.",""],
+	"CCNAW": ["CCNA Wireless covers wireless LANs, including networking associates/administrators, wireless support specialists, and WLAN project managers.",""],
 	"CCDA": ["Cisco Certified Design Associate (CCDA) is for network design engineers, technicians, and support engineers, who enable efficient network environments with an understanding of network design fundamentals.",""],
 	"CCDP": ["A Cisco Certified Design Professional (CCDP) is a network professional that can discuss, design, and create advanced addressing and routing, security, network management, data center, and IP multicast enterprise architectures that include virtual private networking and wireless domains.",""],
 	"CCNP": ["The Cisco Certified Network Professional (CCNP) validates the ability to plan, implement, verify, and troubleshoot local and wide-area enterprise networks and work collaboratively with network technology specialists.",""],
@@ -21,7 +21,7 @@ var certDescriptions = {
 	"CCNP-SP": ["CCNP Service Provider is for service provider network engineers, systems engineers, and network specialists who are responsible for delivering a scalable carrier-grade infrastructure capable of rapid expansion to support ongoing introduction of new managed services and other customer requirements.",""],
 	"CCNP-SPO": ["CCNP SP Operations validates knowledge and skills required to troubleshoot and maintain service provider IP NGN core network infrastructures.","CCNP SP Operations demonstrates knowledge and skills required to isolate network performance problems, implement proactive fault measures using operations management processes, frameworks, and network management systems."],
 	"CCNP-V": ["CCNP Voice validates advance knowledge required to integrate into underlying network architectures and a robust set of skills in implementing, operating, configuring, and troubleshooting a converged IP network.","This includes the ability to create a collaboration solution that is transparent, scalable, and manageable."],
-	"CCNP-W": ["CCNP Wireless addresses the need for designing, implementing, and operating Cisco Wireless networks and mobility infrastructures.","It emphasizes knowledge of wireless networking principles and theory."]
+	"CCNP W": ["CCNP Wireless addresses the need for designing, implementing, and operating Cisco Wireless networks and mobility infrastructures.","It emphasizes knowledge of wireless networking principles and theory."]
 };
 
 exports.find = function(certCode, callback) {
